@@ -140,7 +140,7 @@ a { text-decoration: none; color: cadetblue; }
   align-items: center;
   box-sizing: border-box;
   height: 200px; 
-  background-image: url("lemonade-astro/img/lemonade-header.png");
+  background-image: url("/lemonade-astro/img/lemonade-header.png");
   background-position: center;
   background-size: cover;
   color: black;
