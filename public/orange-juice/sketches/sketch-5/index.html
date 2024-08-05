@@ -1,0 +1,123 @@
+<html lang="en">
+    <head>
+        <title>Cross product in $\R^3$ induces a linear functional</title>
+        <!--<script id="mathjax" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
+        <link rel="manifest" href="/site.webmanifest" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script type="text/javascript">
+          window.MathJax = {
+            tex: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              macros: {
+                "\Z": "\\mathbb{Z}",
+                "\Hom": "\\mathrm{Hom}",
+                "\Aut": "\\mathrm{Aut}",
+                "\null": "\\mathrm{null}",
+                "\R": "\\mathbb{R}",
+                "\N": "\\mathbb{N}",
+                "\Q": "\\mathbb{Q}",
+                "\Primes": "\\mathbb{P}",
+                "\C": "\\mathbb{C}",
+                "\F": "\\mathbb{F}",
+                "\D": "\\mathbb{D}",
+                "\Hart": "\\mathbb{H}",
+                "\Cat": "\\mathsf{Cat}",
+                "\CAT": "\\mathsf{CAT}",
+                "\CatC": "\\mathsf{CatC}",
+                "\CatD": "\\mathsf{CatD}",
+                "\CatE": "\\mathsf{CatE}",
+                "\CSet": "\\mathsf{Set}",
+                "\CGrp": "\\mathsf{Grp}",
+                "\CRing": "\\mathsf{Ring}",
+                "\CCRing": "\\mathsf{CRing}",
+                "\CMod": "\\mathsf{Mod}",
+                "\lendshow": "\\square",
+                "\tendshow": "\\blacksquare"
+              }
+            },
+            options: {
+              renderActions: {
+                addMenu: [],
+                checkLoading: []
+              },
+              ignoreHtmlClass: 'tex2jax_ignore',
+              processHtmlClass: 'tex2jax_process'
+            },
+            loader: {load: ['[tex]/ams']},
+            startup: {
+              ready: () => {
+                window.MathJax.startup.defaultReady();
+              }
+            }
+          };
+        </script>
+      </head>
+    <body>
+    
+        <main>
+            <a href="./"><i>See all sketches...</i></a>
+            <h1 className="title">Sketch 5</h1>
+            <p><b>Cross product in $\R^3$ induces a linear functional</b></p>
+            <hr/>
+            <h2>Huh...</h2>
+            <p>the deeper ideas behind cross products, determinants, and those sorts of things has always eluded me. As I was proving Lemma 3.3 from Chapter 3 of Millman and Parker's book on differential geometry, I was trying to understand if the notation abuse behind the cross product had any motivation or provided insight, and also about coming up with a basis independent understanding of the cross product. It lead me to the ideas in this sketch.</p>
+
+            <p>
+                <b>Date Started:</b> March 14, 2024<br />
+                <b>Date Finished:</b> <i>March 14, 2024</i>
+            </p>
+
+            <h2>Determinants are an indicator of linear independence</h2>
+
+            <p>In my mind, there are two halves to linear algebra. I don't have an a priori name for the first half in my mind, so I'll call it "tensor arithmetic". I call it this because it has to do with simply tabulating data and performing arithmetical operations almost as if we were working with sheets in Excel. For example, we can add rows or columns, we can perform dot products, etc.. The idea comes from the fact that the field structure on $\R$ induces a field structure on $\R^n$, and in general on "tensors" or multidimensional arrays with elements in $\R$. The other half is what I think of as "linear algebra" which I see as the more algebraic/geometric perspective: the study of linear maps and spaces, and their geometry. Maybe this distinction is really a figment of my imagination, since after all the thing which I am calling "tensor arithmetic" really does feel like what we generally call algebra, but I think the distinction comes from what we care about. In tensor arithmetic, I care about the data and manipulations themselves, irrespective of some algebraic or geometric interpretation. Because of this, there is a fixed "basis" which is just a list of indicator rows with one in different positions. In the linear algebra perspective, I prefer basis independent ideas. I would like to think of $\R^3$ as some abstract space or module which just has an origin $0$ specified. There is no basis. This alludes to the geometric picture, where I have an idea of things like perpendicularity, parallelism, etc. which in classical geometry did not need us to choose some sort of basis.</p>
+
+            <p>Notice that determinants are an indicator of linear independence. I'll start with the tensor arithmetic perspective. If we have a list of vectors $\{v_1,\dots, v_k\}$, then we can form a matrix $M$ with this data by simply arranging the vectors in a tabular format. Then it turns out that $\det M$ is zero exactly when there is some linear combination of the vectors which is zero, where a linear combination is essentially some way to add the rows. This can be seen from looking recursively at the definition of the determinant, which we can understand through the Leibniz formula and Laplace expansion. From a more algebraic or geometric perspective, the determinant is the product of eigenvalues of a linear transformation. As such, it is zero exactly when zero is an eigenvalue (since $\R$ is an integral domain) which happens exactly when the null space has nonzero dimension, so again the row space doesn't have maximal dimension (the rows are not linearly independent). As such, from both perspectives, we can see that determinants are an indicator of linear independence.</p>
+
+            <p>To clarify, I still feel that determinants provide more information than just an indicator of linear independence. For exmample, they also provide information on orientation, and also the amount of "dilation" a linear operator does to vectors in a vector space. However, I am still understanding what determinants are, so maybe I'll come to understand them better in a future post.</p>
+
+            <h2>Cross products motivate the construction of a linear functional</h2>
+
+            <p>The cross product is generally defined as: (I'll call this the tensor arithmetic definition)
+              $$u \times v = (u_2 v_3 - u_3 v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1).$$
+              But this definition is not immediately obvious and can be hard to remember, so we sometimes give the following "memory tool" which is also notational abuse: (I'll call this the linear algebraic definition and will make this rigorous below)
+              $$u \times v = \det \begin{pmatrix} e_1 & e_2 & e_3 \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{pmatrix}$$
+              where we have performed notational abuse because $e_1$, $e_2$, and $e_3$ are vectors and not scalars. In a more tensor arithmetic sense, maybe I could argue that we don't really care what they are, as long as they have the right arithmetical properties.
+            </p>
+
+            <p>
+              On the other hand, though, I think this "notational abuse" is actually more intuitive and deeper than the definition itself! Firstly, to avoid notational abuse, notice that we can introduce the following linear functional on $\R^3$:
+              $$\times_{u,v} (x) = \det \begin{pmatrix} x_1 & x_2 & x_3 \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{pmatrix} = \det \begin{pmatrix} x \\ u \\ v \end{pmatrix} = x \cdot (u \times v)$$
+              where $x \cdot (u\times v)$ is the inner product or dot product of $x$ with $u \times v$. From above, we know that $\times_{u,v}$ is an indicator which tells us when $\{x,u,v\}$ is a linearly independent collection. In our case, $\times_{u,v}(x) \neq 0$ if and only if $\{x,u,v\}$ is a linearly independent set if and only if $\{x,u,v\}$ is a basis for $\R^3$. With this symbol, we can see some facts almost immediately:
+              $$u \times v = (\times_{u,v}(e_1), \times_{u,v}(e_2), \times_{u,v}(e_3)), \text{ and }(u\times v)_j = \times_{u,v}(e_j)$$
+              $$u \cdot \langle u, v\rangle = \times_{u,v}(u) = \det \begin{pmatrix} u_1 & u_2 & u_3 \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{pmatrix} = 0$$
+              $$v \cdot \langle u, v\rangle = \times_{u,v}(v) = \det \begin{pmatrix} v_1 & v_2 & v_3 \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{pmatrix} = 0$$
+              $$\times_{u,v}(u\times v) = \langle u\times v, u\times v\rangle = ||u \times v|| \ge 0$$
+              and when $u$ and $v$ are independent, $\times_{u,v}(x) = x \cdot (u\times v) = 0$ exactly when $x$ lies in the plane of $u$ and $v$ (this is illuminating because it shows how we can motivate the tensor arithmetic definition rigorously from our geometric insights).
+            </p>
+
+            <p>It is nice to see that we can actually recover the cross product from our linear functional! This is the first fact above. We also get another interesting idea: $u\times v$ is a solution to $\times_{u,v}(x) = ||x||$. I wonder if this idea is particularly illuminating. As of now, I don't see how it is. What prevents us from doing anything nice quickly is that $||x||$ isn't linear. On the other hand, I think these ideas somewhat motivate higher dimensional generalizations of the cross product. I'd also be curious to explore connections and constructions with polynomials that we might motivate from these more geometric constructions.
+            </p>
+
+            <p>As usual, contact me at aathreyakadambi <i>at</i> gmail <i>dot</i> com if you'd like to discuss any of these ideas!</p>
+
+
+            <h2>References</h2>
+            <ol>
+              <li>“Determinant.” Wikipedia, Wikimedia Foundation, 28 Feb. 2024, en.wikipedia.org/wiki/Determinant.</li>
+              <li>“Laplace Expansion.” Wikipedia, Wikimedia Foundation, 12 Feb. 2024, en.wikipedia.org/wiki/Laplace_expansion.</li>
+              <li>“Leibniz Formula for Determinants.” Wikipedia, Wikimedia Foundation, 12 Nov. 2023, en.wikipedia.org/wiki/Leibniz_formula_for_determinants.</li>
+              <li>Millman, Richard S., and George D. Parker. Elements of Differential Geometry. Tan Chiang, 1984.</li>
+              <li>“Rule of Sarrus.” Wikipedia, Wikimedia Foundation, 11 Feb. 2024, en.wikipedia.org/wiki/Rule_of_Sarrus.</li>
+            </ol>
+
+        </main>
+
+    </body> 
+</html>

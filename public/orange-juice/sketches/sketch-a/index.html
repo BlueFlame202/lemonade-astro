@@ -1,0 +1,83 @@
+<html lang="en">
+    <head>
+        <title>Automorphisms of the Dihedral Group</title>
+        <!--<script id="mathjax" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
+        <link rel="manifest" href="/site.webmanifest" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script type="text/javascript">
+          window.MathJax = {
+            tex: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              macros: {
+                "\Z": "\\mathbb{Z}",
+                "\Hom": "\\mathrm{Hom}",
+                "\Aut": "\\mathrm{Aut}",
+                "\null": "\\mathrm{null}",
+                "\R": "\\mathbb{R}",
+                "\N": "\\mathbb{N}",
+                "\Q": "\\mathbb{Q}",
+                "\Primes": "\\mathbb{P}",
+                "\C": "\\mathbb{C}",
+                "\F": "\\mathbb{F}",
+                "\D": "\\mathbb{D}",
+                "\Hart": "\\mathbb{H}",
+                "\Cat": "\\mathsf{Cat}",
+                "\CAT": "\\mathsf{CAT}",
+                "\CatC": "\\mathsf{CatC}",
+                "\CatD": "\\mathsf{CatD}",
+                "\CatE": "\\mathsf{CatE}",
+                "\CSet": "\\mathsf{Set}",
+                "\CGrp": "\\mathsf{Grp}",
+                "\CRing": "\\mathsf{Ring}",
+                "\CCRing": "\\mathsf{CRing}",
+                "\CMod": "\\mathsf{Mod}",
+                "\lendshow": "\\square",
+                "\tendshow": "\\blacksquare"
+              }
+            },
+            options: {
+              renderActions: {
+                addMenu: [],
+                checkLoading: []
+              },
+              ignoreHtmlClass: 'tex2jax_ignore',
+              processHtmlClass: 'tex2jax_process'
+            },
+            loader: {load: ['[tex]/ams']},
+            startup: {
+              ready: () => {
+                window.MathJax.startup.defaultReady();
+              }
+            }
+          };
+        </script>
+      </head>
+    <body>
+    
+        <main>
+            <a href="../"><i>See all sketches...</i></a>
+            <h1 className="title">Sketch 6</h1>
+                <p><b>Automorphisms of the Dihedral Group</b></p>
+                <hr/>
+                <h2>Huh...</h2>
+                <p>What group properties are preserved by automorphisms? To easily find the center of the dihedral group, we can use the intuition that any reflection doesn't commute with rotations. If we study the elements of the group directly we have to work with an icky $sr^k = r^{-k} s$ which uses a sort of induction, and isn't as intuitive. On the other hand, we can make a more intuitive argument by saying that a <i>reflection</i> is any element which is the image of $s$ under some group automorphism of $D_{2n}$, and a <i>rotation</i> is any element which is the image of $r$ under some automorphism of $D_{2n}$. Then this idea that reflections don't commute with all rotations can be understood very concretely. Can we easily argue that two elements which are "equivalent" in the sense that they are both images of the same element but with respect to two different automorphisms must either both be in the center or both not be in the center?</p>
+
+                <p>
+                    <b>Date Started:</b> March 6, 2024<br />
+                    <b>Date Finished:</b> <i>Unfinished</i>
+                </p>
+
+                
+                <h2>Filtered Colimits on Cayley Graphs</h2>
+
+        </main>
+
+    </body> 
+</html>

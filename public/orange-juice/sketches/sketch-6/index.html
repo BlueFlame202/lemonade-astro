@@ -1,0 +1,135 @@
+<html lang="en">
+    <head>
+        <title>A Quick Result Not Shown In Zhu</title>
+        <!--<script id="mathjax" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js"></script>-->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
+        <link rel="manifest" href="/site.webmanifest" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script type="text/javascript">
+          window.MathJax = {
+            tex: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              macros: {
+                "\Z": "\\mathbb{Z}",
+                "\Hom": "\\mathrm{Hom}",
+                "\Aut": "\\mathrm{Aut}",
+                "\null": "\\mathrm{null}",
+                "\R": "\\mathbb{R}",
+                "\N": "\\mathbb{N}",
+                "\Q": "\\mathbb{Q}",
+                "\Primes": "\\mathbb{P}",
+                "\C": "\\mathbb{C}",
+                "\F": "\\mathbb{F}",
+                "\D": "\\mathbb{D}",
+                "\Hart": "\\mathbb{H}",
+                "\Cat": "\\mathsf{Cat}",
+                "\CAT": "\\mathsf{CAT}",
+                "\CatC": "\\mathsf{CatC}",
+                "\CatD": "\\mathsf{CatD}",
+                "\CatE": "\\mathsf{CatE}",
+                "\CSet": "\\mathsf{Set}",
+                "\CGrp": "\\mathsf{Grp}",
+                "\CRing": "\\mathsf{Ring}",
+                "\CCRing": "\\mathsf{CRing}",
+                "\CMod": "\\mathsf{Mod}",
+                "\lendshow": "\\square",
+                "\tendshow": "\\blacksquare"
+              }
+            },
+            options: {
+              renderActions: {
+                addMenu: [],
+                checkLoading: []
+              },
+              ignoreHtmlClass: 'tex2jax_ignore',
+              processHtmlClass: 'tex2jax_process'
+            },
+            loader: {load: ['[tex]/ams']},
+            startup: {
+              ready: () => {
+                window.MathJax.startup.defaultReady();
+              }
+            }
+          };
+        </script>
+      </head>
+    <body>
+    
+        <main>
+            <a href="./"><i>See all sketches...</i></a>
+            <h1 className="title">Sketch 6</h1>
+            <p><b>A Quick Result Not Shown In Zhu</b></p>
+            <hr/>
+            <h2>Huh...</h2>
+            <p>Kehe Zhu, in his book <i>Operator Theory in Function Spaces</i>, leaves many results without proofs for the sake of brevity. I'm rereading his book, and I realize I still don't have command over the geometry and ideas of Banach spaces. This will be one of a sequence of sketches proving results that Zhu leaves out as well-known.</p>
+
+            <p>
+                <b>Date Started:</b> May 16, 2024<br />
+                <b>Date Finished:</b> <i>May 16, 2024</i>
+            </p>
+
+            <h3>Banach Spaces</h3>
+            <p>I decided to first brainstorm all the properties that I think of when I think of a linear function:</p>
+            <ol>
+                <li>$F(ax+by) = aF(x) + bF(y)$ (lines map points proportionately).</li>
+                <li>Lines are continuous, and differentiable, and $C^\infty$.</li>
+                <li>The "slope" of a line determines the proportions on the line to which points are mapped.</li>
+                <li>The derivative of a line is its slope.</li>
+                <li>The second derivative of a line is zero.</li>
+            </ol>
+
+            <p>anyway, let's get started. Let $X$ be a Banach space.</p> 
+
+
+
+            <p>
+                <b>Proposition.</b> Let $F : X \rightarrow \C$ be a linear functional on a Banach space $X$. $F$ is bounded if and only if $F$ is continuous in the norm topology of $X$.
+            </p>
+            <p><i>Proof.</i></p>
+            <p>Suppose $F$ is bounded, so that $|F(x)| \le C||x||$ for all $x \in x$. Then for any $x$ and $y$ satisfying $||x - y|| < \frac{\epsilon}{C}$, 
+            $$|F(x) - F(y)| = |F(x-y)| \le C||x-y|| < C \cdot \frac{\epsilon}{C} = \epsilon$$ 
+            so indeed $F$ is continuous.</p>
+            <p>Suppose $F$ is continouous. Notice that $S := \{x : ||x|| = 1\}$ is a compact set, so $F(S)$ is compact. In particular, it is bounded. Let $C = \sup_S |F|$. Then
+                $$|F(x)| = ||x|| |F(\frac{x}{||x||})| \le ||x|| \cdot C$$ 
+            as desired.</p>
+            <p style="text-align: right">⬛</p>
+
+            <p>
+                <b>Proposition.</b> The space of all bounded linear functionals on $X$ is a Banach space with the norm:
+                $$||F|| = \sup_S |F|.$$
+                This is called the dual space of $X$.
+            </p>
+            <p><i>Proof.</i></p>
+
+            <p>
+                Firstly, bounded linear functionals form an abelian group (they are closed under addition and inverses, and zero is a bounded linear functional), and are compatible with scalar multiplication, so they form a vector space. Our norm is clearly nonnegative, and satisfies:
+                <ol>
+                    <li>$||F + G|| = \sup_S |F + G| \le \sup_S (|F| + |G|) \le \sup_S |F| + \sup_S |G| = ||F|| + ||G||$</li>
+                    <li>$||aF|| = \sup_S |aF| = \sup_S |a||F| = |a|\sup_S |F| = |a| ||F||$</li>
+                    <li>$||F|| = 0 \Leftrightarrow \sup_S |F| = 0 \Leftrightarrow F = 0$</li>
+                    <li>If $\{F_n\}$ is a Cauchy sequence, then for each $x \in S$, $\{F_n(x)\}$ is Cauchy, so there is a limit $F(x)$ for each $x$. I believe the uniform continuity of the $F_n(x)$ convergence guarantees continuity of $F$ (although I'm kind of sleepy, it's really late). This is now linear because we define it by $F(y) = F(\frac{y}{||y||})$, and it must be the limit everywhere, and each $F_n$ is linear.</li>
+                </ol>
+            </p>
+            <p style="text-align: right">🤔⬛</p>
+            
+            <!-- <p><b>Theorem.</b> If $1 \le p < +\infty$ and $1/p + 1/q = 1$, then
+                $$(L^p(\Omega, d\mu))^* = L^q(\Omega, d\mu)$$
+                in the sense that each function $g \in L^q(\Omega, d\mu)$ induces a bounded linear functional $F_g$ on $L^p(\Omega, d\mu)$ as follows:
+                $$F_g(f) = \int_{\Omega} f(x) \overline{g(x)} \; d\mu(x), \qquad f\in L^p(\Omega, d\mu),$$
+                and every bounded linear functional on $L^p(\Omega, d\mu)$ arises in this way.
+            </p>
+            <p><i>Proof Idea (I think).</i></p>
+            <p>
+                That this is a linear functional is straightforward. Suppose $F$ is a bounded linear functional on $L^p(\Omega, d\mu)$. Simply taking $f = \frac{1}{\mu(E)}\chi_E$ for all $E \subseteq \Omega$, we can obtain the average of $g$ on any set $E$. This completely fixes a $g$. It remains to show this $g$ is actually what we want. But $f$ can be approximated by simple functions. 
+            </p> -->
+
+        </main>
+
+    </body> 
+</html>
