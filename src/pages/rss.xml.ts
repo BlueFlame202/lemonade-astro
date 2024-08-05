@@ -14,8 +14,8 @@ interface BlogPost {
 export async function GET(context: { site: string }) {
   const blog: BlogPost[] = await getCollection('blog');
   return rss({
-    title: 'Buzz’s Blog',
-    description: 'A humble Astronaut’s guide to the stars',
+    title: "Lemonade",
+    description: "Aathreya's Digital Room",
     site: context.site,
     items: blog.map((post) => ({
       title: post.data.title,
