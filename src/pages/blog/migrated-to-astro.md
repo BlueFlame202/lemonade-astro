@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: "Migrated to AstroJS!"
-image: "/img/pics/astrojs.png"
+image: "/lemonade-astro/img/pics/astrojs.png"
 author: "Aathreya Kadambi"
 date: "Aug 5, 2024"
 ---

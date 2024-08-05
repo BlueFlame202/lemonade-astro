@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: "Grafting and GPUs"
-image: "/img/pics/IMG_3880.jpg"
+image: "/lemonade-astro/img/pics/IMG_3880.jpg"
 author: "Aathreya Kadambi"
 date: "May 18, 2024"
 ---

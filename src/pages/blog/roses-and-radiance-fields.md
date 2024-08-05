@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: "Roses and Radiance Fields"
-image: "/img/pics/20240427-berkeley-hort.jpg"
+image: "/lemonade-astro/img/pics/20240427-berkeley-hort.jpg"
 author: "Aathreya Kadambi"
 date: "April 27, 2024"
 ---
