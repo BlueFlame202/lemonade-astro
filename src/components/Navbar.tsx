@@ -34,19 +34,19 @@ export default function Navbar(props : NavbarProps) {
     </div>
     <div className={`group shadow-md relative z-10 flex items-center w-full bg-white transition-colors duration-500 no-underline hover:bg-special-blue ${isOpen ? 'block' : 'hidden'} md:flex md:items-center md:justify-around`} style={{ maxHeight: '5%' }}>
         <div className="text-base my-4 flex flex-col md:flex-row justify-around w-full" id="links">
-          <a href="/" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'home' ? 'active' : ''}`}>
+          <a href="/lemonade-astro/" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'home' ? 'active' : ''}`}>
             Home
           </a>
-          <a href="/blog" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'blog' ? 'active' : ''}`}>
+          <a href="/lemonade-astro/blog" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'blog' ? 'active' : ''}`}>
             Blog
           </a>
-          <a href="/notes" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'notes' ? 'active' : ''}`}>
+          <a href="/lemonade-astro/notes" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'notes' ? 'active' : ''}`}>
             Notes
           </a>
-          <a href="/projects" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'projects' ? 'active' : ''}`}>
+          <a href="/lemonade-astro/projects" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'projects' ? 'active' : ''}`}>
             Projects
           </a>
-          <a href="/sea" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'sea' ? 'active' : ''}`}>
+          <a href="/lemonade-astro/sea" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'sea' ? 'active' : ''}`}>
             🌊
           </a>
           <a href="https://www.ocf.berkeley.edu/~aathreyak/orange-juice" className={`p-2 relative flex items-center no-underline overflow-hidden expanding-underline text-special-blue group-hover:text-white group-hover:no-underline ${props.active === 'orange-juice' ? 'active' : ''}`}>
