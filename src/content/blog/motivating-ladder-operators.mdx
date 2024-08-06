@@ -90,7 +90,7 @@ To start, I'll define ladder operator:
 
 
 <div class="theorem">
-**Theorem.** Suppose every eigenvalue of $A$ satisfies $\lambda \le \lambda_{\max}$ for some eigenvalue $\lambda_{\max}$. Then if $L$ is a ladder operator for $A$ of step size $c \in \R^+$, and $q(A) - L^\dagger L = p(B)$ for some operator $B$ which commutes with $A$ where $p$ and $q$ are polynomials, the only possible eigenvalues of $A$ are those in $\lambda_{\max} - c\mathbb{N}$.
+**Theorem.** Suppose every eigenvalue of $A$ satisfies $\lambda \le \lambda_{\max}$ for some eigenvalue $\lambda_{\max}$. Then if $L$ is a ladder operator for $A$ of step size $c \in \R^+$, and $q(A) + L^\dagger L = B$ for some operator $B$ which commutes with $A$ where $p$ and $q$ are polynomials, the only possible eigenvalues of $A$ are those in $\lambda_{\max} - c\mathbb{N}$.
 </div>
 *Proof.*
 
@@ -99,13 +99,17 @@ If $\lambda_{\max}$ is an eigenvalue, consider a corresponding eigenvector $v$ w
 but $\lambda_{\max} + c$ cannot be an eigenvalue. Thus, it must be that $Lv = 0$, or equivalently, $\|Lv\| = 0$. Now notice that:
 <div style="text-align: center">$$\|Lv\| = \langle v, L^\dagger L v\rangle$$</div>
 Now notice that
-<div style="text-align: center">$$L^\dagger Lv = (q(A) - p(B))v = q(A)v - p(B) v = q(\lambda_{\max})v - p(\mu)v = (q(\lambda_{\max}) - p(\mu)) v$$</div>
+<div style="text-align: center">$$L^\dagger Lv = (q(A) - B)v = q(A)v - B v = q(\lambda_{\max})v - \mu v = (q(\lambda_{\max}) - \mu) v$$</div>
 so that
-<div style="text-align: center">$$0 = \|Lv\| = q(\lambda_{\max}) - p(\mu)$$</div>
-so $q(\lambda_{\max}) = p(\mu)$.
+<div style="text-align: center">$$0 = \|Lv\| = q(\lambda_{\max}) - \mu$$</div>
+so $q(\lambda_{\max}) = \mu$.
 
 
-Hmm... there is something still missing here. The thing is, in the case of the energy eigenvalues, we can actually find $B$ as the identity operator so $\mu = 1$, and $\lambda_{\min}$ is some constant value. In the case of the angular momentum operator, we made $A$ the $L^2$ operator and $B$ the $L_z$ operator. However, this isn't quite the result I wanted. I was hoping for something more like "boundedness translates into discreteness," but it looks like somehow, these polynomials end up messing things around. I'll have to think about it more, and I'll update this post.
+Hmm... there is something still missing here. The thing is, in the case of the energy eigenvalues, we can actually find $B$ as the identity operator so $\mu = 1$, and $\lambda_{\min}$ is some constant value. In the case of the angular momentum operator, we made $A$ the $L^2$ operator and $B$ the $L_z$ operator. However, this isn't quite the result I wanted. I was hoping for something more like "boundedness translates into discreteness," but it looks like somehow, these polynomials end up messing things around. 
+
+It feels like beyond this step, the path diverges. Like in the case of the hamiltonian operator for the particle in a box, the fact that $Lv = 0$ can be used to simplify the Shrodinger equation, and in the case of the angular momentum operator, we were able to use the identity of the polynomial in combination with the reverse statement with a $\lambda_{\min}$ to discritize the angular momentum. It seems that things may be more complicated than I thought. One similarity I do see, though, is that we have $I = L^\dagger L + p(H)$ and $L^2 = A^\dagger A + q(L_z)$, and $I$ and $L^2$ are similar in that they commute with everything else, $L$ and $A$ are the respective ladder operators of $H$ and $L_z$, and $q$ and $p$ are polynomials. I feel like there has to be something there.
+
+I'll have to think about it more, and I'll make an update in a future post!
 
 
 ## Random Scratch Work
