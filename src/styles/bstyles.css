@@ -50,7 +50,10 @@ b {
 }
 
 .theorem {
-    padding: 1.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
     border: 0px solid #cf02cf;
@@ -81,7 +84,10 @@ b {
 }
 
 .remark {
-    padding: 1.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
     border: 0px solid #fff200;
