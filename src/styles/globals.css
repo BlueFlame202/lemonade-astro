@@ -155,3 +155,12 @@ a { text-decoration: none; color: cadetblue; }
 .glossy-link::before {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 20%, transparent 60%);
 }
+
+.scaled-iframe {
+  width: 166%;
+  height: 500px;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+  border: none;
+  display: block;
+}
