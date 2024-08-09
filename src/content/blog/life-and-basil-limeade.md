@@ -8,6 +8,9 @@ slug: "life-and-basil-limeade"
 date: "August 8, 2024"
 ---
 
+Check this out, if you have a Spotify account and are logged into this browser, you can listen to this song while you read:
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/47YITQYhJXw79nCor48tnq?utm_source=generator" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy""></iframe>
+
 So far, the summer has been pretty good! I finally got a chance to start a garden which now includes succulents, basil (which finally developed roots recently!), and money plants, upgraded the blog, and learned a lot about language models and partial differential equations. I also gained a lot of weight back (I had unintentionally lost around 10 pounds or so in the last year) and a tiny bit of muscle too by doing lots of pushups. I've had some moments where I felt kind of down, though. In particular, I feel like I messed up a lot of things, like not paying enough attention in quantum mechanics and not knowing enough to make "cool" progress in research.
 
 One thing I've been thinking about recently is how I really started to enjoy math. I think I really started to enjoy it when I studied number theory, because I kind of had the freedom to just play around with numbers and figure out whatever I wanted to about them. After I learned the proof of Fermat's theorem and later about Legendre's symbols, I really got to play around with what I new and try my ideas on unsolved problems. I made up lots of ideas in lots of notebooks, and even got to rederive a lot of the basic results that exist on certain conjectures. Nothing too fancy, but very enjoyable.
