@@ -4,24 +4,17 @@ import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
-import vercel from '@astrojs/vercel/serverless';
-
-
 import sitemap from "@astrojs/sitemap";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: vercel({
-    webAnalytics: { enabled: true }
-  }),
   site: 'https://aathreyakadambi.vercel.app/',
-  integrations: [
-    tailwind(), 
-    react(), 
-    mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex]
-    }), 
-    sitemap()]
+  integrations: [tailwind(), react(), mdx({
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex]
+  }), sitemap()],
+  output: "server",
+  adapter: vercel()
 });
