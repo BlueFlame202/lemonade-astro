@@ -1,9 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: "Migrated to AstroJS!"
+description: "I moved the blog from NextJS to AstroJS!"
 image: "/img/pics/astrojs.png"
 author: "Aathreya Kadambi"
-date: "Aug 5, 2024"
+date: "Aug 4, 2024"
 ---
 
 I just migrated my blog to AstroJS! This has a lot of benefits for me. The main reason I switched was just to experiment with the tech and see how it felt. So far, it feels good. And boy do they know how to make a VS Code theme!
